@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ru-RU" xml:lang="ru-RU">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="Самсонова М.И. Группа НФИбд-02-21" />
+  <title>Лабораторная работа №1</title>
+  <style>
+    html {
+      font-family: Arial;
+      font-size: 12pt;
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Courier New;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+  
+  
+  
+  
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">Лабораторная работа №1</h1>
+<p class="subtitle">Установка и конфигурация операционной системы на
+виртуальную машину</p>
+<p class="author">Самсонова М.И. Группа НФИбд-02-21</p>
+</header>
+<h1 id="цель-работы">Цель работы</h1>
+<p>Установка ОС на Virtual Box для дальнейшего использования в ходе
+прохождения курса.</p>
+<h1 id="задание">Задание</h1>
+<ol type="1">
+<li>Установить ОС на Virtual Box.</li>
+<li>Получите следующую информацию.
+<ol type="1">
+<li>Версия ядра Linux (Linux version).</li>
+<li>Частота процессора (Detected Mhz processor).</li>
+<li>Модель процессора (CPU0).</li>
+<li>Объем доступной оперативной памяти (Memory available).</li>
+<li>Тип обнаруженного гипервизора (Hypervisor detected).</li>
+<li>Тип файловой системы корневого раздела.</li>
+<li>Последовательность монтирования файловых систем. [1]</li>
+</ol></li>
+</ol>
+<h1 id="теоретическое-введение">Теоретическое введение</h1>
+<p>Виртуальная машина (VM, от англ. virtual machine) — программная и/или
+аппаратная система, эмулирующая аппаратное обеспечение некоторой
+платформы (guest — гостевая платформа) и исполняющая программы для
+guest-платформы на host-платформе (host — хост-платформа,
+платформа-хозяин) или виртуализирующая некоторую платформу и создающая
+на ней среды, изолирующие друг от друга программы и даже операционные
+системы; также спецификация некоторой вычислительной среды. [2]</p>
+<p>VirtualBox (Oracle VM VirtualBox) — программный продукт виртуализации
+для операционных систем Windows, Linux, FreeBSD, macOS,
+Solaris/OpenSolaris, ReactOS, DOS и других. [3]</p>
+<h1 id="выполнение-лабораторной-работы">Выполнение лабораторной
+работы</h1>
+<h2 id="установка-ос">Установка ОС</h2>
+<p>Предварительно были скачаны Virtual Box (и установлена) и дистрибутив
+Rocky.</p>
+<ol type="1">
+<li>Создаем новую виртуальную машину и настариваем. Часть 1.</li>
+</ol>
+<figure id="fig:002">
+<img src="image/1.png" style="width:70.0%"
+alt="Имя и операционная система VM" />
+<figcaption aria-hidden="true">Имя и операционная система
+VM</figcaption>
+</figure>
+<h1 id="настройка-vm.-часть-2.">Настройка VM. Часть 2.</h1>
+<figure id="fig:002">
+<img src="image/2.png" style="width:70.0%" alt="Выбор обьема памяти" />
+<figcaption aria-hidden="true">Выбор обьема памяти</figcaption>
+</figure>
+<h1 id="настройка-vm.-часть-3.">Настройка VM. Часть 3.</h1>
+<figure id="fig:003">
+<img src="image/3.png" style="width:70.0%"
+alt="Создание виртуального жесткого диска" />
+<figcaption aria-hidden="true">Создание виртуального жесткого
+диска</figcaption>
+</figure>
+<h1 id="настройка-vm.-часть-4.">Настройка VM. Часть 4.</h1>
+<figure id="fig:005">
+<img src="image/4.png" style="width:70.0%;height:70.0%"
+alt="(рис. 4. Итог настроек)" />
+<figcaption aria-hidden="true">(рис. 4. Итог настроек)</figcaption>
+</figure>
+<h1 id="настройка-vm.-часть-5.">Настройка VM. Часть 5.</h1>
+<figure id="fig:006">
+<img src="image/5.png" style="width:70.0%;height:70.0%"
+alt="(рис. 5. Носители)" />
+<figcaption aria-hidden="true">(рис. 5. Носители)</figcaption>
+</figure>
+<h1 id="запуск-vm.">Запуск VM.</h1>
+<figure id="fig:006">
+<img src="image/6.png" style="width:70.0%;height:70.0%"
+alt="(рис. 6. Запуск)" />
+<figcaption aria-hidden="true">(рис. 6. Запуск)</figcaption>
+</figure>
+<h1 id="настройки-ос.-часть-1.">Настройки ОС. Часть 1.</h1>
+<figure id="fig:007">
+<img src="image/7.png" style="width:70.0%;height:70.0%"
+alt="(рис. 7. Стартовое меню установки)" />
+<figcaption aria-hidden="true">(рис. 7. Стартовое меню
+установки)</figcaption>
+</figure>
+<h1 id="настройки-ос.-часть-2.">Настройки ОС. Часть 2.</h1>
+<figure id="fig:008">
+<img src="image/8.png" style="width:70.0%;height:70.0%"
+alt="(рис. 8. Root password)" />
+<figcaption aria-hidden="true">(рис. 8. Root password)</figcaption>
+</figure>
+<h1 id="настройки-ос.-часть-3.">Настройки ОС. Часть 3.</h1>
+<figure id="fig:009">
+<img src="image/9.png" style="width:70.0%;height:70.0%"
+alt="(рис. 9. Create User)" />
+<figcaption aria-hidden="true">(рис. 9. Create User)</figcaption>
+</figure>
+<h1 id="настройки-ос.-часть-4.">Настройки ОС. Часть 4.</h1>
+<figure id="fig:010">
+<img src="image/10.png" style="width:70.0%;height:70.0%"
+alt="(рис. 10. Ethernet)" />
+<figcaption aria-hidden="true">(рис. 10. Ethernet)</figcaption>
+</figure>
+<h1 id="настройки-ос.-часть-5.">Настройки ОС. Часть 5.</h1>
+<figure id="fig:011">
+<img src="image/11.png" style="width:70.0%;height:70.0%"
+alt="(рис. 11. Keyboard)" />
+<figcaption aria-hidden="true">(рис. 11. Keyboard)</figcaption>
+</figure>
+<h1 id="настройки-ос.-часть-6.">Настройки ОС. Часть 6.</h1>
+<figure id="fig:012">
+<img src="image/12.png" style="width:70.0%;height:70.0%"
+alt="(рис. 12. Установка системы)" />
+<figcaption aria-hidden="true">(рис. 12. Установка системы)</figcaption>
+</figure>
+<h1 id="поиск-информации-через-терминал">Поиск информации через
+терминал</h1>
+<ol type="1">
+<li>Перезагружаем виртуальную машину после установки. Открывваем
+терминал. Применяем команды dmesg и dmesg | less. (<span
+class="citation" data-cites="fig:016">@fig:016</span> - <span
+class="citation" data-cites="fig:017">@fig:017</span>)</li>
+</ol>
+<figure id="fig:016">
+<img src="image/13.png" style="width:70.0%;height:70.0%"
+alt="(рис. 15. dmesg)" />
+<figcaption aria-hidden="true">(рис. 15. dmesg)</figcaption>
+</figure>
+<figure id="fig:017">
+<img src="image/14.png" style="width:70.0%;height:70.0%"
+alt="(рис. 16. dmesg | less)" />
+<figcaption aria-hidden="true">(рис. 16. dmesg | less)</figcaption>
+</figure>
+<h1 id="поиск-информации-через-терминал-1">Поиск информации через
+терминал</h1>
+<ol start="2" type="1">
+<li>Начинаем поиск информации с помощью команд grep | -i “ключевое
+слово”. Для поиска информации о файловых системах используем команды df
+-Th и findmnt. (<span class="citation"
+data-cites="fig:018">@fig:018</span> - <span class="citation"
+data-cites="fig:019">@fig:019</span>)</li>
+</ol>
+<figure id="fig:018">
+<img src="image/15.png" style="width:70.0%;height:70.0%"
+alt="(рис. 17. Объем доступной оперативной памяти, версия ядра линукс, частота процессора, модель процессора, тип файловой системы корневого раздела )" />
+<figcaption aria-hidden="true">(рис. 17. Объем доступной оперативной
+памяти, версия ядра линукс, частота процессора, модель процессора, тип
+файловой системы корневого раздела )</figcaption>
+</figure>
+<figure id="fig:019">
+<img src="image/16.png" style="width:70.0%;height:70.0%"
+alt="(рис. 18. Последовательность монтирования файловых систем)" />
+<figcaption aria-hidden="true">(рис. 18. Последовательность монтирования
+файловых систем)</figcaption>
+</figure>
+<h1 id="вывод">Вывод</h1>
+<p>В ходе выполнения лабораторной работы была установлена новая ОС на
+новую виртуальную машину. Так была найдена следующая информация:</p>
+<ul>
+<li>версия ядра Linux 5.14.0-427.13.1.el9_4.x86_64</li>
+<li>частота процессора 2166.666 МГц</li>
+<li>модель процессора Intel(R) Celeron(R) N2830 @ 2.16Ghz</li>
+<li>обьем доступной оперативной памяти 260860К/20966969К</li>
+<li>тип обнаруженного гипервизора KVM</li>
+<li>тип файловой системы корневого раздела xfs</li>
+<li>последовательность монтирования файловых систем</li>
+</ul>
+<h1 id="библиография">Библиография</h1>
+<ol type="1">
+<li>Методические материалы курса.</li>
+<li>Wikipedia: Виртуальная машина.
+(https://ru.wikipedia.org/wiki/%D0%92%D0%B8%D1%80%D1%82%D1%83%D0%B0%D0%BB%D1%8C%D0%BD%D0%B0%D1%8F_%D0%BC%D0%B0%D1%88%D0%B8%D0%BD%D0%B0)</li>
+<li>Wikipedia: Virtual Box.
+(https://ru.wikipedia.org/wiki/VirtualBox)</li>
+</ol>
+</body>
+</html>
